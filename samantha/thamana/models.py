@@ -6,8 +6,9 @@ class Loan(models.Model):
 	LoanID = models.IntegerField(primary_key="LoanID")
 	AccNo = models.IntegerField()
 	LoanAmt = models.FloatField()
+	phone_no = models.IntegerField(default=0)
 	
 
 class LoanAdmin(admin.ModelAdmin):
-	list_display = ('Name','LoanID','AccNo','LoanAmt')
+	list_display = ('Name','LoanID','AccNo','LoanAmt','phone_no')
 
